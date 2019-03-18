@@ -17,24 +17,28 @@ public class GameManager : MonoBehaviour
     private Text questionText;
 
     [SerializeField]
-    private Text CurrentScore;
+    private Text CurrentScore; //current score of correct questions
 
     [SerializeField]
-    private Text ScoreOne;
+    private Text textScoreOne; //score one value
 
     [SerializeField]
-    private Text ScoreTwo;
+    private Text textScoreTwo; //score two value
 
     [SerializeField]
-    private Text ScoreThree;
+    private Text textScoreThree; // score three value
 
     [SerializeField]
-    private Text ScoreFour;
+    private Text textScoreFour; // score four value
 
     [SerializeField]
     public float timeBetweemQuestions = 1f;
 
-    
+    public static int addScoreOneTo; // int to static int converter for scoreone
+    public static int addScoreTwoTo; // int to static int converter for scoretwo
+    public static int addScoreThreeTo; // int to static int converter for scorethree
+    public static int addScoreFourTo; // int to static int converter for scorefour
+
     [SerializeField]
     private Animator animator;
 
@@ -48,18 +52,19 @@ public class GameManager : MonoBehaviour
 
         SetCurrentQuestion();
         CurrentScore.text = "Score: " + ScoreInformation.CurrentScore.ToString(); //set UI on screen
-        ScoreOne.text = "Score: " + ScoreInformation.ScoreOne.ToString(); //set UI on screen
-        ScoreTwo.text = "Score: " + ScoreInformation.ScoreTwo.ToString(); //set UI on screen
-        ScoreThree.text = "Score: " + ScoreInformation.ScoreThree.ToString(); //set UI on screen
-        ScoreFour.text = "Score: " + ScoreInformation.ScoreFour.ToString(); //set UI on screen
+        textScoreOne.text = "Score: " + ScoreInformation.ScoreOne.ToString(); //set UI on screen
+        textScoreTwo.text = "Score: " + ScoreInformation.ScoreTwo.ToString(); //set UI on screen
+        textScoreThree.text = "Score: " + ScoreInformation.ScoreThree.ToString(); //set UI on screen
+        textScoreFour.text = "Score: " + ScoreInformation.ScoreFour.ToString(); //set UI on screen
 
+        addScoreOneTo = currentQuestion.addScoreOne; // set question score to game manager addscoreonto *static int required.
+        addScoreTwoTo = currentQuestion.addScoreTwo; // set question score to game manager addscoreonto *static int required.
+        addScoreThreeTo = currentQuestion.addScoreThree; // set question score to game manager addscoreonto *static int required.
+        addScoreFourTo = currentQuestion.addScoreFour; // set question score to game manager addscoreonto *static int required.
     }
 
     void Update(){
-        ScoreOne.text = "hello world1"; //Score one
-        ScoreTwo.text = "hello world2"; //Score Two
-        ScoreThree.text = "hello world3"; //Score Three
-        ScoreFour.text = "hello world4"; // Score Four
+        addScoreOneTo = currentQuestion.addScoreOne;
     }
 
     void SetCurrentQuestion()
@@ -88,6 +93,10 @@ public class GameManager : MonoBehaviour
             Debug.Log("CORRECT!");
             ScoreInformation.CurrentScore += 1;  //Add Score to Scoreinformation
             CurrentScore.text = "Score: " + ScoreInformation.CurrentScore.ToString();  //add Scoreinformation to UI
+            ScoreInformation.ScoreOne += addScoreOneTo; //update score on correct
+            ScoreInformation.ScoreTwo += addScoreTwoTo; //update score on correct
+            ScoreInformation.ScoreThree += addScoreThreeTo; //update score on correct
+            ScoreInformation.ScoreFour += addScoreFourTo; //update score on correct
         }
         else
         {
@@ -105,6 +114,10 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("CORRECT!");
             ScoreInformation.CurrentScore += 1; //Add Score to Scoreinformation
+            ScoreInformation.ScoreOne += addScoreOneTo; //update score on correct
+            ScoreInformation.ScoreTwo += addScoreTwoTo; //update score on correct
+            ScoreInformation.ScoreThree += addScoreThreeTo; //update score on correct
+            ScoreInformation.ScoreFour += addScoreFourTo; //update score on correct
             CurrentScore.text = "Score: " + ScoreInformation.CurrentScore.ToString(); //add Scoreinformation to UI
         }
         else

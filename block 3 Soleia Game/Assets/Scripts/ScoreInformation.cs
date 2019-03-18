@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//-- All code within this script stays after scene reload. -- //
+
 public class ScoreInformation : MonoBehaviour
 {
     public static int CurrentScore; // player score
-    public static int ScoreOne;
-    public static int ScoreTwo;
-    public static int ScoreThree;
-    public static int ScoreFour;
+    public static int ScoreOne; // score one
+    public static int ScoreTwo; // score two
+    public static int ScoreThree; // score three
+    public static int ScoreFour; // score four
 
     void Awake()
     {
