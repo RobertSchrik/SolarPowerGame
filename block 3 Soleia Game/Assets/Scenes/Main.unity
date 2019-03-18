@@ -1101,36 +1101,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 595483788}
   m_CullTransparentMesh: 0
---- !u!1 &603114594
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 603114595}
-  m_Layer: 0
-  m_Name: remove
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &603114595
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 603114594}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 438.8521, y: 276.39294, z: 242.62282}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &647088266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1765,28 +1735,28 @@ MonoBehaviour:
   questions:
   - question: i am super cool
     isTrue: 1
-    ScoreOne: 1
-    ScoreTwo: 5
-    ScoreThree: 3
-    ScoreFour: 4
+    addScoreOne: 4
+    addScoreTwo: 3
+    addScoreThree: 7
+    addScoreFour: 4
   - question: 'red is blue '
     isTrue: 0
-    ScoreOne: 0
-    ScoreTwo: -3
-    ScoreThree: 3
-    ScoreFour: 0
+    addScoreOne: 7
+    addScoreTwo: 5
+    addScoreThree: 3
+    addScoreFour: 1
   - question: 2+2= 4
     isTrue: 1
-    ScoreOne: 0
-    ScoreTwo: 0
-    ScoreThree: 0
-    ScoreFour: 0
+    addScoreOne: 1
+    addScoreTwo: 7
+    addScoreThree: 4
+    addScoreFour: 6
   questionText: {fileID: 595483790}
   CurrentScore: {fileID: 1493491608}
-  ScoreOne: {fileID: 329664260}
-  ScoreTwo: {fileID: 871399631}
-  ScoreThree: {fileID: 513494328}
-  ScoreFour: {fileID: 1577156904}
+  textScoreOne: {fileID: 329664260}
+  textScoreTwo: {fileID: 871399631}
+  textScoreThree: {fileID: 513494328}
+  textScoreFour: {fileID: 1577156904}
   timeBetweemQuestions: 1
   animator: {fileID: 1217785376}
 --- !u!4 &1332101989
