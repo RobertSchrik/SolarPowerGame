@@ -818,7 +818,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 123, y: -5}
+  m_AnchoredPosition: {x: 181, y: -5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &370274890
@@ -831,6 +831,7 @@ GameObject:
   m_Component:
   - component: {fileID: 370274892}
   - component: {fileID: 370274891}
+  - component: {fileID: 370274893}
   m_Layer: 0
   m_Name: ScoreKeeper
   m_TagString: Untagged
@@ -864,6 +865,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &370274893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370274890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d011593bd408beb468ec3a830fe395fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &388812382
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,7 +1032,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 472, y: -5}
+  m_AnchoredPosition: {x: 512, y: -5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &595483788
@@ -1339,7 +1352,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 287, y: -5}
+  m_AnchoredPosition: {x: 348, y: -5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1144792651
@@ -1735,19 +1748,19 @@ MonoBehaviour:
   questions:
   - question: i am super cool
     isTrue: 1
-    addScoreOne: 4
+    addScoreOne: -10
     addScoreTwo: 3
     addScoreThree: 7
     addScoreFour: 4
   - question: 'red is blue '
     isTrue: 0
-    addScoreOne: 7
+    addScoreOne: -7
     addScoreTwo: 5
     addScoreThree: 3
     addScoreFour: 1
   - question: 2+2= 4
     isTrue: 1
-    addScoreOne: 1
+    addScoreOne: -4
     addScoreTwo: 7
     addScoreThree: 4
     addScoreFour: 6
@@ -2030,7 +2043,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 632, y: -5}
+  m_AnchoredPosition: {x: 679, y: -5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1628143790

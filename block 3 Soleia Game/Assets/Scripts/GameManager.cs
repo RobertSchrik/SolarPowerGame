@@ -51,10 +51,10 @@ public class GameManager : MonoBehaviour
         }
 
         SetCurrentQuestion();
-        CurrentScore.text = "Score: " + ScoreInformation.CurrentScore.ToString(); //set UI on screen
-        textScoreOne.text = "Score: " + ScoreInformation.ScoreOne.ToString(); //set UI on screen
-        textScoreTwo.text = "Score: " + ScoreInformation.ScoreTwo.ToString(); //set UI on screen
-        textScoreThree.text = "Score: " + ScoreInformation.ScoreThree.ToString(); //set UI on screen
+        CurrentScore.text = "Completed Tasks: " + ScoreInformation.CurrentScore.ToString(); //set UI on screen
+        textScoreOne.text = "Balance: " + ScoreInformation.ScoreOne.ToString() + "Million"; //set UI on screen
+        textScoreTwo.text = "Social Status: " + ScoreInformation.ScoreTwo.ToString(); //set UI on screen
+        textScoreThree.text = "Energy: " + ScoreInformation.ScoreThree.ToString() + "Kwh"; //set UI on screen
         textScoreFour.text = "Score: " + ScoreInformation.ScoreFour.ToString(); //set UI on screen
 
         addScoreOneTo = currentQuestion.addScoreOne; // set question score to game manager addscoreonto *static int required.
@@ -100,6 +100,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            ScoreInformation.CurrentScore += 1;  //Add Score to Scoreinformation
             Debug.Log("WRONG!");
         }
 
@@ -122,6 +123,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            ScoreInformation.CurrentScore += 1;  //Add Score to Scoreinformation
             Debug.Log("WRONG!");
         }
 
