@@ -20,6 +20,18 @@ public class GameManager : MonoBehaviour
     private Text CurrentScore;
 
     [SerializeField]
+    private Text ScoreOne;
+
+    [SerializeField]
+    private Text ScoreTwo;
+
+    [SerializeField]
+    private Text ScoreThree;
+
+    [SerializeField]
+    private Text ScoreFour;
+
+    [SerializeField]
     public float timeBetweemQuestions = 1f;
 
     
@@ -36,11 +48,18 @@ public class GameManager : MonoBehaviour
 
         SetCurrentQuestion();
         CurrentScore.text = "Score: " + ScoreInformation.CurrentScore.ToString(); //set UI on screen
+        ScoreOne.text = "Score: " + ScoreInformation.ScoreOne.ToString(); //set UI on screen
+        ScoreTwo.text = "Score: " + ScoreInformation.ScoreTwo.ToString(); //set UI on screen
+        ScoreThree.text = "Score: " + ScoreInformation.ScoreThree.ToString(); //set UI on screen
+        ScoreFour.text = "Score: " + ScoreInformation.ScoreFour.ToString(); //set UI on screen
 
     }
 
     void Update(){
-
+        ScoreOne.text = "hello world1"; //Score one
+        ScoreTwo.text = "hello world2"; //Score Two
+        ScoreThree.text = "hello world3"; //Score Three
+        ScoreFour.text = "hello world4"; // Score Four
     }
 
     void SetCurrentQuestion()

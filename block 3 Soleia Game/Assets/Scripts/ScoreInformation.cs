@@ -5,6 +5,10 @@ using UnityEngine;
 public class ScoreInformation : MonoBehaviour
 {
     public static int CurrentScore; // player score
+    public static int ScoreOne;
+    public static int ScoreTwo;
+    public static int ScoreThree;
+    public static int ScoreFour;
 
     void Awake()
     {
