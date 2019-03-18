@@ -68,8 +68,6 @@ public class GameManager : MonoBehaviour
         currentQuestion = unansweredQuestions[randomQuestionIndex];
 
         questionText.text = currentQuestion.question;
-
-        
     }
 
     IEnumerator TransitionToNextQuestion ()

@@ -1765,10 +1765,22 @@ MonoBehaviour:
   questions:
   - question: i am super cool
     isTrue: 1
+    ScoreOne: 1
+    ScoreTwo: 5
+    ScoreThree: 3
+    ScoreFour: 4
   - question: 'red is blue '
     isTrue: 0
+    ScoreOne: 0
+    ScoreTwo: -3
+    ScoreThree: 3
+    ScoreFour: 0
   - question: 2+2= 4
     isTrue: 1
+    ScoreOne: 0
+    ScoreTwo: 0
+    ScoreThree: 0
+    ScoreFour: 0
   questionText: {fileID: 595483790}
   CurrentScore: {fileID: 1493491608}
   ScoreOne: {fileID: 329664260}
