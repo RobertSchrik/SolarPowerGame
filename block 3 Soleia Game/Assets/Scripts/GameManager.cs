@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
     private Animator animator;
 
     [SerializeField]
-    private GameObject NPCTextureSprite;
+    private RawImage NPCTextureSprite;
 
     void Start(){
 
@@ -70,6 +70,8 @@ public class GameManager : MonoBehaviour
         RemoveMoneyTo = currentQuestion.negativeMoneyScore;
         RemoveSocialTo = currentQuestion.negativeSocialScore;
         RemoveEnergyTo = currentQuestion.negativeEnergyScore;
+
+        NPCTextureSprite.texture = currentQuestion.NPCSprite;
     }
 
     void SetCurrentQuestion(){
