@@ -8,9 +8,9 @@ using UnityEngine.UI;
 public class ScoreInformation : MonoBehaviour{
     //SavedScores
     public static int CurrentScore;
-    public static int MoneyBalance = 1000;
-    public static int SocialBalance = 1000;
-    public static int EnergyBalance = 500;
+    public static int MoneyBalance = 50;
+    public static int SocialBalance = 50;
+    public static int EnergyBalance = 50;
 
 //    float TimeRemaining;
 

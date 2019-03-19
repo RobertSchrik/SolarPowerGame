@@ -7,6 +7,10 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    // sliders
+    public Slider EnergySlider;
+    public Slider MoneySlider;
+    public Slider SocialSlider;
 
     public Question[] questions;
     private static List<Question> unansweredQuestions;
@@ -42,7 +46,7 @@ public class GameManager : MonoBehaviour
     public static int RemoveEnergyTo;
     
     [SerializeField]
-    private Animator animator;
+    public Animator animator;
 
     [SerializeField]
     private RawImage NPCTextureSprite;
@@ -57,9 +61,9 @@ public class GameManager : MonoBehaviour
 
         //Put score information in text format on screen.
         CurrentScore.text = "Completed Tasks: " + ScoreInformation.CurrentScore.ToString();
-        textMoneyScore.text = "Balance: " + ScoreInformation.MoneyBalance.ToString() + "Million";
-        textSocialScore.text = "Social Status: " + ScoreInformation.SocialBalance.ToString();
-        textEnergyScore.text = "Energy: " + ScoreInformation.EnergyBalance.ToString() + "Kwh";
+       // textMoneyScore.text = "Balance: " + ScoreInformation.MoneyBalance.ToString() + "Million";
+       // textSocialScore.text = "Social Status: " + ScoreInformation.SocialBalance.ToString();
+       // textEnergyScore.text = "Energy: " + ScoreInformation.EnergyBalance.ToString() + "Kwh";
 
         //When player chooses yes add these scores to the total score.
         AddMoneyTo = currentQuestion.PositiveMoneyScore;
@@ -70,6 +74,11 @@ public class GameManager : MonoBehaviour
         RemoveMoneyTo = currentQuestion.negativeMoneyScore;
         RemoveSocialTo = currentQuestion.negativeSocialScore;
         RemoveEnergyTo = currentQuestion.negativeEnergyScore;
+
+        // slider gets updated based on the current score.
+        EnergySlider.value = ScoreInformation.EnergyBalance;
+        MoneySlider.value = ScoreInformation.MoneyBalance;
+        SocialSlider.value = ScoreInformation.SocialBalance;
 
         NPCTextureSprite.texture = currentQuestion.NPCSprite;
     }
