@@ -31,11 +31,6 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public float timeBetweemQuestions = 1f;
 
-  
-
-
-
-
     //static yes answers.
     public static int AddMoneyTo; 
     public static int AddSocialTo;
@@ -46,10 +41,11 @@ public class GameManager : MonoBehaviour
     public static int RemoveSocialTo;
     public static int RemoveEnergyTo;
     
-
     [SerializeField]
     private Animator animator;
 
+    [SerializeField]
+    private GameObject NPCTextureSprite;
 
     void Start(){
 

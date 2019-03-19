@@ -11,7 +11,6 @@ public class ScoreInformation : MonoBehaviour{
     public static int MoneyBalance = 1000;
     public static int SocialBalance = 1000;
     public static int EnergyBalance = 500;
-    public Texture[] textures; 
 
 //    float TimeRemaining;
 
