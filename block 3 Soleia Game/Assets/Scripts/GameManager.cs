@@ -44,9 +44,6 @@ public class GameManager : MonoBehaviour
     public static int RemoveMoneyTo;
     public static int RemoveSocialTo;
     public static int RemoveEnergyTo;
-    
-    [SerializeField]
-    public Animator animator;
 
     [SerializeField]
     private RawImage NPCTextureSprite;
@@ -96,7 +93,6 @@ public class GameManager : MonoBehaviour
     }
 
     public void UserSelectYes(){
-        animator.SetTrigger("Yes");
         if (currentQuestion.isTrue){
             //When yes selected add the values to ScoreInforamtion
             ScoreInformation.CurrentScore += 1;
@@ -117,7 +113,6 @@ public class GameManager : MonoBehaviour
     }
 
     public void UserSelectNo(){
-        animator.SetTrigger("No");
         if (!currentQuestion.isTrue){
             //When yes selected add the values to ScoreInforamtion
             ScoreInformation.CurrentScore += 1;
