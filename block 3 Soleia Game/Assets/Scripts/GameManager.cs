@@ -31,6 +31,11 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public float timeBetweemQuestions = 1f;
 
+  
+
+
+
+
     //static yes answers.
     public static int AddMoneyTo; 
     public static int AddSocialTo;
@@ -40,9 +45,11 @@ public class GameManager : MonoBehaviour
     public static int RemoveMoneyTo;
     public static int RemoveSocialTo;
     public static int RemoveEnergyTo;
+    
 
     [SerializeField]
     private Animator animator;
+
 
     void Start(){
 
@@ -89,6 +96,9 @@ public class GameManager : MonoBehaviour
             ScoreInformation.MoneyBalance += AddMoneyTo;
             ScoreInformation.SocialBalance += AddSocialTo;
             ScoreInformation.EnergyBalance += AddEnergyTo;
+            
+            
+            
         } else{
             //When no selected add the values to ScoreInforamtion
             ScoreInformation.CurrentScore += 1;

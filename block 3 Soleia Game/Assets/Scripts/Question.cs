@@ -4,7 +4,7 @@ public class Question {
     public string question;
     public bool isTrue;
 
-    //Positive Scores
+     //Positive Scores
     public int PositiveMoneyScore;
     public int PositiveSocialScore;
     public int PositiveEnergyScore;
