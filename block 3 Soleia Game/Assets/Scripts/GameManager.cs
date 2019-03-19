@@ -20,114 +20,100 @@ public class GameManager : MonoBehaviour
     private Text CurrentScore; //current score of correct questions
 
     [SerializeField]
-    private Text textScoreOne; //score one value
+    private Text textMoneyScore; //score one value
 
     [SerializeField]
-    private Text textScoreTwo; //score two value
+    private Text textSocialScore; //score two value
 
     [SerializeField]
-    private Text textScoreThree; // score three value
-
-    [SerializeField]
-    private Text textScoreFour; // score four value
+    private Text textEnergyScore; // score three value
 
     [SerializeField]
     public float timeBetweemQuestions = 1f;
 
-    public static int addScoreOneTo; // int to static int converter for scoreone
-    public static int addScoreTwoTo; // int to static int converter for scoretwo
-    public static int addScoreThreeTo; // int to static int converter for scorethree
-    public static int addScoreFourTo; // int to static int converter for scorefour
+    //static yes answers.
+    public static int AddMoneyTo; 
+    public static int AddSocialTo;
+    public static int AddEnergyTo; 
+
+    //static no answers.
+    public static int RemoveMoneyTo;
+    public static int RemoveSocialTo;
+    public static int RemoveEnergyTo;
 
     [SerializeField]
     private Animator animator;
 
-    void Start()
-    {
+    void Start(){
 
-        if (unansweredQuestions == null || unansweredQuestions.Count == 0)
-        {
+        if (unansweredQuestions == null || unansweredQuestions.Count == 0){
             unansweredQuestions = questions.ToList<Question>();
         }
 
         SetCurrentQuestion();
-        CurrentScore.text = "Completed Tasks: " + ScoreInformation.CurrentScore.ToString(); //set UI on screen
-        textScoreOne.text = "Balance: " + ScoreInformation.ScoreOne.ToString() + "Million"; //set UI on screen
-        textScoreTwo.text = "Social Status: " + ScoreInformation.ScoreTwo.ToString(); //set UI on screen
-        textScoreThree.text = "Energy: " + ScoreInformation.ScoreThree.ToString() + "Kwh"; //set UI on screen
-        textScoreFour.text = "Score: " + ScoreInformation.ScoreFour.ToString(); //set UI on screen
 
-        addScoreOneTo = currentQuestion.addScoreOne; // set question score to game manager addscoreonto *static int required.
-        addScoreTwoTo = currentQuestion.addScoreTwo; // set question score to game manager addscoreonto *static int required.
-        addScoreThreeTo = currentQuestion.addScoreThree; // set question score to game manager addscoreonto *static int required.
-        addScoreFourTo = currentQuestion.addScoreFour; // set question score to game manager addscoreonto *static int required.
+        //Put score information in text format on screen.
+        CurrentScore.text = "Completed Tasks: " + ScoreInformation.CurrentScore.ToString();
+        textMoneyScore.text = "Balance: " + ScoreInformation.MoneyBalance.ToString() + "Million";
+        textSocialScore.text = "Social Status: " + ScoreInformation.SocialBalance.ToString();
+        textEnergyScore.text = "Energy: " + ScoreInformation.EnergyBalance.ToString() + "Kwh";
+
+        //When player chooses yes add these scores to the total score.
+        AddMoneyTo = currentQuestion.PositiveMoneyScore;
+        AddSocialTo = currentQuestion.PositiveSocialScore;
+        AddEnergyTo = currentQuestion.PositiveEnergyScore;
+
+        //When player chooses no add these scores to the total score.
+        RemoveMoneyTo = currentQuestion.negativeMoneyScore;
+        RemoveSocialTo = currentQuestion.negativeSocialScore;
+        RemoveEnergyTo = currentQuestion.negativeEnergyScore;
     }
 
-    void Update(){
-        addScoreOneTo = currentQuestion.addScoreOne;
-    }
-
-    void SetCurrentQuestion()
-    {
+    void SetCurrentQuestion(){
         int randomQuestionIndex = Random.Range(0, unansweredQuestions.Count);
         currentQuestion = unansweredQuestions[randomQuestionIndex];
-
         questionText.text = currentQuestion.question;
     }
 
-    IEnumerator TransitionToNextQuestion ()
-    {
+    IEnumerator TransitionToNextQuestion (){
         unansweredQuestions.Remove(currentQuestion);
-
         yield return new WaitForSeconds(timeBetweemQuestions);
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);  
     }
 
-    public void UserSelectYes()
-    {
+    public void UserSelectYes(){
         animator.SetTrigger("Yes");
-        if (currentQuestion.isTrue)
-        {
-            Debug.Log("CORRECT!");
-            ScoreInformation.CurrentScore += 1;  //Add Score to Scoreinformation
-            CurrentScore.text = "Score: " + ScoreInformation.CurrentScore.ToString();  //add Scoreinformation to UI
-            ScoreInformation.ScoreOne += addScoreOneTo; //update score on correct
-            ScoreInformation.ScoreTwo += addScoreTwoTo; //update score on correct
-            ScoreInformation.ScoreThree += addScoreThreeTo; //update score on correct
-            ScoreInformation.ScoreFour += addScoreFourTo; //update score on correct
+        if (currentQuestion.isTrue){
+            //When yes selected add the values to ScoreInforamtion
+            ScoreInformation.CurrentScore += 1;
+            ScoreInformation.MoneyBalance += AddMoneyTo;
+            ScoreInformation.SocialBalance += AddSocialTo;
+            ScoreInformation.EnergyBalance += AddEnergyTo;
+        } else{
+            //When no selected add the values to ScoreInforamtion
+            ScoreInformation.CurrentScore += 1;
+            ScoreInformation.MoneyBalance += RemoveMoneyTo;
+            ScoreInformation.SocialBalance += RemoveSocialTo;
+            ScoreInformation.EnergyBalance += RemoveEnergyTo;
         }
-        else
-        {
-            ScoreInformation.CurrentScore += 1;  //Add Score to Scoreinformation
-            Debug.Log("WRONG!");
-        }
-
         StartCoroutine(TransitionToNextQuestion());
-
     }
 
-    public void UserSelectNo()
-    {
+    public void UserSelectNo(){
         animator.SetTrigger("No");
-        if (!currentQuestion.isTrue)
-        {
-            Debug.Log("CORRECT!");
-            ScoreInformation.CurrentScore += 1; //Add Score to Scoreinformation
-            ScoreInformation.ScoreOne += addScoreOneTo; //update score on correct
-            ScoreInformation.ScoreTwo += addScoreTwoTo; //update score on correct
-            ScoreInformation.ScoreThree += addScoreThreeTo; //update score on correct
-            ScoreInformation.ScoreFour += addScoreFourTo; //update score on correct
-            CurrentScore.text = "Score: " + ScoreInformation.CurrentScore.ToString(); //add Scoreinformation to UI
+        if (!currentQuestion.isTrue){
+            //When yes selected add the values to ScoreInforamtion
+            ScoreInformation.CurrentScore += 1;
+            ScoreInformation.MoneyBalance += AddMoneyTo;
+            ScoreInformation.SocialBalance += AddSocialTo;
+            ScoreInformation.EnergyBalance += AddEnergyTo;
+        } else{
+            //When no selected add the values to ScoreInforamtion
+            ScoreInformation.CurrentScore += 1;
+            ScoreInformation.MoneyBalance += RemoveMoneyTo;
+            ScoreInformation.SocialBalance += RemoveSocialTo;
+            ScoreInformation.EnergyBalance += RemoveEnergyTo;
         }
-        else
-        {
-            ScoreInformation.CurrentScore += 1;  //Add Score to Scoreinformation
-            Debug.Log("WRONG!");
-        }
-
         StartCoroutine(TransitionToNextQuestion());
-
     }
 }
