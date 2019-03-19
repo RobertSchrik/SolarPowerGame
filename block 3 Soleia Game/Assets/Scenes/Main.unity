@@ -238,7 +238,6 @@ GameObject:
   - component: {fileID: 147896099}
   - component: {fileID: 147896098}
   - component: {fileID: 147896097}
-  - component: {fileID: 147896105}
   m_Layer: 5
   m_Name: Button Layer
   m_TagString: MaterialButtonLayer
@@ -440,18 +439,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 147896095}
   m_CullTransparentMesh: 0
---- !u!114 &147896105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 147896095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ed1b4fc603d4c7449cfb4b4f15267bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &263851083
 GameObject:
   m_ObjectHideFlags: 0
@@ -2148,7 +2135,6 @@ GameObject:
   - component: {fileID: 1217785373}
   - component: {fileID: 1217785372}
   - component: {fileID: 1217785371}
-  - component: {fileID: 1217785376}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2255,25 +2241,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!95 &1217785376
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1217785370}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 23b740798796ec64484dfe8cb2bd6218, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1232694786
 GameObject:
   m_ObjectHideFlags: 0
@@ -2525,7 +2492,7 @@ MonoBehaviour:
   textSocialScore: {fileID: 871399631}
   textEnergyScore: {fileID: 513494328}
   timeBetweemQuestions: 0.5
-  animator: {fileID: 1217785376}
+  animator: {fileID: 0}
   NPCTextureSprite: {fileID: 1457817215}
 --- !u!4 &1332101989
 Transform:
@@ -3077,7 +3044,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1633037126}
-  - component: {fileID: 1633037127}
   m_Layer: 5
   m_Name: Yesbtn
   m_TagString: Untagged
@@ -3106,18 +3072,6 @@ RectTransform:
   m_AnchoredPosition: {x: -174, y: 5.075}
   m_SizeDelta: {x: -384.1, y: 10.15}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1633037127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1633037125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ed1b4fc603d4c7449cfb4b4f15267bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1677176288
 GameObject:
   m_ObjectHideFlags: 0
