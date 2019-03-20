@@ -112,78 +112,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &7032978
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7032979}
-  - component: {fileID: 7032981}
-  - component: {fileID: 7032980}
-  m_Layer: 5
-  m_Name: RawImage (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &7032979
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7032978}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1217785375}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -789, y: 20}
-  m_SizeDelta: {x: 238.8, y: 238.8}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7032980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7032978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: f35d4c81a65b5c0408eee6d37da14bd8, type: 3}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!222 &7032981
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7032978}
-  m_CullTransparentMesh: 0
 --- !u!1 &48990887
 GameObject:
   m_ObjectHideFlags: 0
@@ -1551,150 +1479,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1110426440}
   m_CullTransparentMesh: 0
---- !u!1 &1121516918
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1121516919}
-  - component: {fileID: 1121516921}
-  - component: {fileID: 1121516920}
-  m_Layer: 5
-  m_Name: RawImage (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1121516919
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1121516918}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1217785375}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -789, y: 20}
-  m_SizeDelta: {x: 238.8, y: 238.8}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1121516920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1121516918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 6f1f848e76d9e76429c7371696e40ccb, type: 3}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!222 &1121516921
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1121516918}
-  m_CullTransparentMesh: 0
---- !u!1 &1134098220
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1134098221}
-  - component: {fileID: 1134098223}
-  - component: {fileID: 1134098222}
-  m_Layer: 5
-  m_Name: RawImage (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1134098221
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1134098220}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1217785375}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -789, y: 20}
-  m_SizeDelta: {x: 238.8, y: 238.8}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1134098222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1134098220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 6dc58a45d1b8c734fb63bd15110f5477, type: 3}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!222 &1134098223
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1134098220}
-  m_CullTransparentMesh: 0
 --- !u!1 &1144792651
 GameObject:
   m_ObjectHideFlags: 0
@@ -2115,9 +1899,6 @@ RectTransform:
   - {fileID: 1633037126}
   - {fileID: 120250115}
   - {fileID: 1457817214}
-  - {fileID: 1121516919}
-  - {fileID: 1134098221}
-  - {fileID: 7032979}
   - {fileID: 1455692901}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -2491,31 +2272,45 @@ MonoBehaviour:
   - question: The farmers are complaining about new plans for the solar parks. They
       are afraid of losing their subsidies!
     isTrue: 1
-    NPCSprite: {fileID: 2800000, guid: f35d4c81a65b5c0408eee6d37da14bd8, type: 3}
-    PositiveMoneyScore: 10
-    PositiveSocialScore: -10
-    PositiveEnergyScore: 10
-    negativeMoneyScore: -10
-    negativeSocialScore: 10
-    negativeEnergyScore: -10
-  - question: 'red is blue '
-    isTrue: 1
     NPCSprite: {fileID: 2800000, guid: 6dc58a45d1b8c734fb63bd15110f5477, type: 3}
-    PositiveMoneyScore: 10
-    PositiveSocialScore: -10
-    PositiveEnergyScore: 10
-    negativeMoneyScore: -10
-    negativeSocialScore: 10
-    negativeEnergyScore: -10
-  - question: 2+2= 4
+    PositiveMoneyScore: 3
+    PositiveSocialScore: -6
+    PositiveEnergyScore: 3
+    negativeMoneyScore: -3
+    negativeSocialScore: 6
+    negativeEnergyScore: -3
+  - question: We want to buy up some farmland, so we can use that land to build wind
+      turbines there. The farmland is very close to a neighbouring village and some
+      civilians are worried about horizon pollution. Part of the profits will go back
+      to the municipality.
     isTrue: 1
     NPCSprite: {fileID: 2800000, guid: 6f1f848e76d9e76429c7371696e40ccb, type: 3}
-    PositiveMoneyScore: 10
-    PositiveSocialScore: -10
-    PositiveEnergyScore: 10
-    negativeMoneyScore: -10
-    negativeSocialScore: 10
-    negativeEnergyScore: -10
+    PositiveMoneyScore: 5
+    PositiveSocialScore: -5
+    PositiveEnergyScore: 3
+    negativeMoneyScore: -5
+    negativeSocialScore: 2
+    negativeEnergyScore: 0
+  - question: The farmers are complaining about new plans for the solar parks. They
+      are afraid of losing their subsidies!
+    isTrue: 1
+    NPCSprite: {fileID: 2800000, guid: 6dc58a45d1b8c734fb63bd15110f5477, type: 3}
+    PositiveMoneyScore: 3
+    PositiveSocialScore: -6
+    PositiveEnergyScore: 3
+    negativeMoneyScore: -3
+    negativeSocialScore: 6
+    negativeEnergyScore: 3
+  - question: Our power generator is slowly falling apart, should we invest into a
+      new cleaner one?
+    isTrue: 1
+    NPCSprite: {fileID: 2800000, guid: 6f1f848e76d9e76429c7371696e40ccb, type: 3}
+    PositiveMoneyScore: -15
+    PositiveSocialScore: 5
+    PositiveEnergyScore: 5
+    negativeMoneyScore: 0
+    negativeSocialScore: -5
+    negativeEnergyScore: -8
   questionText: {fileID: 595483790}
   CurrentScore: {fileID: 1493491608}
   textMoneyScore: {fileID: 0}
@@ -2604,7 +2399,7 @@ Transform:
   - {fileID: 1147353029}
   - {fileID: 824563825}
   m_Father: {fileID: 1217785375}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1457817213
 GameObject:
