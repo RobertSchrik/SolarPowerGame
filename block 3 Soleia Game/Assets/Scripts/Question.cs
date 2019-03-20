@@ -17,5 +17,23 @@ public class Question {
     public int negativeMoneyScore;
     public int negativeSocialScore;
     public int negativeEnergyScore;
+
+    public bool PlayerInRange;
+    public Dialogue dialogue;
+    public Transform DialogueManager;
+
+    public Animator animator;
+
+    void update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return) && animator.GetBool("IsOpen"))
+        {
+            DialogueManager.GetComponent<DialogueManager>().DisplayNextSentence();
+        }
+        else if (Input.GetKeyDown(KeyCode.Return))
+        {
+            GameObject.FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        }
+    }
 }
 
