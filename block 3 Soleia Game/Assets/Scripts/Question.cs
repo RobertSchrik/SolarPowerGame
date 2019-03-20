@@ -4,36 +4,26 @@ using UnityEngine.UI;
 public class Question {
 
     public string question;
+    public Texture NPCSprite;
     public bool isTrue;
 
-    public Texture NPCSprite;
-
-     //Positive Scores
+    [Space(10)]
+    //Positive Scores
     public int PositiveMoneyScore;
     public int PositiveSocialScore;
     public int PositiveEnergyScore;
 
+    [Space(10)]
     //Negative Scores
     public int negativeMoneyScore;
     public int negativeSocialScore;
     public int negativeEnergyScore;
+    [Space(10)]
 
-    public bool PlayerInRange;
     public Dialogue dialogue;
+
+    [Space(10)]
     public Transform DialogueManager;
-
     public Animator animator;
-
-    void update()
-    {
-        if (Input.GetKeyDown(KeyCode.Return) && animator.GetBool("IsOpen"))
-        {
-            DialogueManager.GetComponent<DialogueManager>().DisplayNextSentence();
-        }
-        else if (Input.GetKeyDown(KeyCode.Return))
-        {
-            GameObject.FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-        }
-    }
 }
 

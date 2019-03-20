@@ -18,12 +18,14 @@ public class GameManager : MonoBehaviour
     private Question currentQuestion;
 
     [SerializeField]
+    [Space(10)]
     private Text questionText;
 
     [SerializeField]
     private Text CurrentScore; //current score of correct questions
 
     [SerializeField]
+    [Space(10)]
     private Text textMoneyScore; //score one value
 
     [SerializeField]
@@ -33,6 +35,7 @@ public class GameManager : MonoBehaviour
     private Text textEnergyScore; // score three value
 
     [SerializeField]
+    [Space(10)]
     public float timeBetweemQuestions = 1f;
 
     //static yes answers.
@@ -46,7 +49,11 @@ public class GameManager : MonoBehaviour
     public static int RemoveEnergyTo;
 
     [SerializeField]
+    [Space(10)]
     private RawImage NPCTextureSprite;
+
+    public Transform DialogueManager;
+    public Animator animator;
 
     void Start(){
 
@@ -129,5 +136,16 @@ public class GameManager : MonoBehaviour
         StartCoroutine(TransitionToNextQuestion());
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return) && animator.GetBool("IsOpen"))
+        {
+            DialogueManager.GetComponent<DialogueManager>().DisplayNextSentence();
+        }
+        else if (Input.GetKeyDown(KeyCode.Return))
+        {
+            FindObjectOfType<DialogueManager>().StartDialogue(currentQuestion.dialogue);
+        }
+    }
 
 }
