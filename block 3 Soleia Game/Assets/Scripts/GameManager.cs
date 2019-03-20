@@ -35,6 +35,9 @@ public class GameManager : MonoBehaviour
     private Text textEnergyScore; // score three value
 
     [SerializeField]
+    private Text GameOverText;
+
+    [SerializeField]
     [Space(10)]
     public float timeBetweemQuestions = 1f;
 
@@ -54,6 +57,8 @@ public class GameManager : MonoBehaviour
 
     public Transform DialogueManager;
     public Animator animator;
+
+    public GameObject gameOverScreen;
 
     void Start(){
 
@@ -86,7 +91,7 @@ public class GameManager : MonoBehaviour
 
         NPCTextureSprite.texture = currentQuestion.NPCSprite;
 
-        ScoreInformation.GameOver();
+        GameOver();
     }
 
     void SetCurrentQuestion(){
@@ -147,6 +152,41 @@ public class GameManager : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Return))
         {
             FindObjectOfType<DialogueManager>().StartDialogue(currentQuestion.dialogue);
+        }
+    }
+
+    public void GameOver(){
+
+
+        if (ScoreInformation.MoneyBalance >= 100){
+            Debug.Log("Moneydead+");
+            gameOverScreen.SetActive(true);
+            GameOverText.text = "You died having to much money";
+        }
+        if (ScoreInformation.SocialBalance >= 100){
+            Debug.Log("SocialDead+");
+            gameOverScreen.SetActive(true);
+            GameOverText.text = "You died having to much social";
+        }
+        if (ScoreInformation.EnergyBalance >= 100){
+            Debug.Log("EnergyDead+");
+            gameOverScreen.SetActive(true);
+            GameOverText.text = "You died having to much energy";
+        }
+        if (ScoreInformation.MoneyBalance <= 0){
+            Debug.Log("Moneydead-");
+            gameOverScreen.SetActive(true);
+            GameOverText.text = "You died having to little money";
+        }
+        if (ScoreInformation.SocialBalance <= 0){
+            Debug.Log("SocialDead-");
+            gameOverScreen.SetActive(true);
+            GameOverText.text = "You died having to little social";
+        }
+        if (ScoreInformation.EnergyBalance <= 0){
+            Debug.Log("EnergyDead-");
+            gameOverScreen.SetActive(true);
+            GameOverText.text = "You died having to little energy";
         }
     }
 

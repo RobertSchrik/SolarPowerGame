@@ -24,33 +24,6 @@ public class ScoreInformation : MonoBehaviour{
         }
     }
 
-    public static void GameOver(){
-        if (MoneyBalance >= 100)
-        {
-            Debug.Log("Moneydead+");
-        }
-        if (SocialBalance >= 100)
-        {
-            Debug.Log("SocialDead+");
-        }
-        if (EnergyBalance >= 100)
-        {
-            Debug.Log("EnergyDead+");
-        }
-        if (MoneyBalance <= 0)
-        {
-            Debug.Log("Moneydead-");
-        }
-        if (SocialBalance <= 0)
-        {
-            Debug.Log("SocialDead-");
-        }
-        if (EnergyBalance <= 0)
-        {
-            Debug.Log("EnergyDead-");
-        }
-    }
-
 //    public IEnumerator StartCountdown(float TotalTime = 10){
 //        TimeRemaining = TotalTime;
 //        while (TimeRemaining > 0){
