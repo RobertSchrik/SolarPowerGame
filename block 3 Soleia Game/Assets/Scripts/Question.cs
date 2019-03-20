@@ -20,6 +20,7 @@ public class Question {
     public int negativeEnergyScore;
     [Space(10)]
 
+
     public Dialogue dialogue;
 
     [Space(10)]

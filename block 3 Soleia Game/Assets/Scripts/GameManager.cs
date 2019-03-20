@@ -85,6 +85,8 @@ public class GameManager : MonoBehaviour
         SocialSlider.value = ScoreInformation.SocialBalance;
 
         NPCTextureSprite.texture = currentQuestion.NPCSprite;
+
+        ScoreInformation.GameOver();
     }
 
     void SetCurrentQuestion(){

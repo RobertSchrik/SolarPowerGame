@@ -12,6 +12,8 @@ public class ScoreInformation : MonoBehaviour{
     public static int SocialBalance = 50;
     public static int EnergyBalance = 50;
 
+    private GameManager gameManager;
+
 //    float TimeRemaining;
 
     void Awake(){
@@ -19,6 +21,33 @@ public class ScoreInformation : MonoBehaviour{
 
         if (FindObjectsOfType(GetType()).Length > 1){ //check if dontdestroy object exists more than ones if true destroy new object
             Destroy(gameObject);
+        }
+    }
+
+    public static void GameOver(){
+        if (MoneyBalance >= 100)
+        {
+            Debug.Log("Moneydead+");
+        }
+        if (SocialBalance >= 100)
+        {
+            Debug.Log("SocialDead+");
+        }
+        if (EnergyBalance >= 100)
+        {
+            Debug.Log("EnergyDead+");
+        }
+        if (MoneyBalance <= 0)
+        {
+            Debug.Log("Moneydead-");
+        }
+        if (SocialBalance <= 0)
+        {
+            Debug.Log("SocialDead-");
+        }
+        if (EnergyBalance <= 0)
+        {
+            Debug.Log("EnergyDead-");
         }
     }
 
