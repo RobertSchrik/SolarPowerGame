@@ -34,6 +34,36 @@ public class DialogueManager : MonoBehaviour
         DisplayNextSentence();
     }
 
+    public void StartDialogueEndBad(DialogueEndBad dialogueendbad)
+    {
+        animator.SetBool("IsOpen", true);
+
+        nameText.text = dialogueendbad.name;
+
+        sentences.Clear();
+
+        foreach (string sentence in dialogueendbad.senteces)
+        {
+            sentences.Enqueue(sentence);
+        }
+        DisplayNextSentence();
+    }
+
+    public void StartDialogueEndGood(DialogueEndGood dialogueendgood)
+    {
+        animator.SetBool("IsOpen", true);
+
+        nameText.text = dialogueendgood.name;
+
+        sentences.Clear();
+
+        foreach (string sentence in dialogueendgood.senteces)
+        {
+            sentences.Enqueue(sentence);
+        }
+        DisplayNextSentence();
+    }
+
     //onclick load next centence
     public void DisplayNextSentence()
     {

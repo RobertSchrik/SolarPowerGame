@@ -8,13 +8,20 @@ using UnityEngine.UI;
 public class ScoreInformation : MonoBehaviour{
     //SavedScores
     public static int CurrentScore;
-    public static int MoneyBalance = 50;
-    public static int SocialBalance = 50;
-    public static int EnergyBalance = 50;
+    public static int MoneyBalance =  55;
+    public static int SocialBalance = 55;
+    public static int EnergyBalance = 55;
 
     private GameManager gameManager;
 
 //    float TimeRemaining;
+
+    public static void resetscorelists(){
+        CurrentScore = 0;
+        MoneyBalance = 55;
+        SocialBalance = 55;
+        EnergyBalance = 55;
+    }
 
     void Awake(){
         DontDestroyOnLoad(this); // avoids destrucion on load

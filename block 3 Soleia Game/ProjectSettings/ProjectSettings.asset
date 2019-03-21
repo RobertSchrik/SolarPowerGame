@@ -597,7 +597,7 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
-    Collab: 0
+    Collab: 1
     UNet: 1
   luminIcon:
     m_Name: 
@@ -618,10 +618,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: d4cf572b-d238-40e0-9e87-5ebc24bd0452
+  cloudProjectId: 329bcfb0-47ab-4623-8935-449ad2e6fbf9
   framebufferDepthMemorylessMode: 0
   projectName: block 3 Soleia Game
-  organizationId: unity_cr78zgdb8jz6dq
+  organizationId: robertschrik1998
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

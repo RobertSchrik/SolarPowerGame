@@ -22,6 +22,8 @@ public class Question {
 
 
     public Dialogue dialogue;
+    public DialogueEndBad dialogueendbad;
+    public DialogueEndGood dialogueendgood;
 
     [Space(10)]
     public Transform DialogueManager;
